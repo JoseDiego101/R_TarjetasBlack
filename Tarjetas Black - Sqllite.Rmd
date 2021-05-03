@@ -3,11 +3,6 @@ title: "Tarjetas Black"
 output: word_document
 ---
 
-```{r setup, include=FALSE}
-if (!require("knitr")) install.packages("knitr")
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # SQLite Example
 
 First, you have to install SQLite dependency
@@ -16,7 +11,6 @@ First, you have to install SQLite dependency
 if (!require("RSQLite")) install.packages("RSQLite")
 ```
 
-Then, create the Database connection ...
 
 ```{r}
 library(DBI)
@@ -28,7 +22,7 @@ And finally, you can query the database ...
 
 ```{sql connection=con}
 
-SELECT *
+SELECT nombre, funcion
 FROM consejero
-LIMIT 5
+LIMIT 10
 ```
