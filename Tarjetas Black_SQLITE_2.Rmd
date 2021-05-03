@@ -1,0 +1,28 @@
+---
+title: "Tarjetas Black"
+output: word_document
+---
+
+# SQLite Example
+
+First, you have to install SQLite dependency
+
+```{r}
+if (!require("RSQLite")) install.packages("RSQLite")
+```
+
+
+```{r}
+library(DBI)
+con <- dbConnect(RSQLite::SQLite(), dbname="tajetasblack.db")
+
+```
+
+And finally, you can query the database ...
+
+```{sql connection=con}
+
+SELECT id_consejero
+FROM consejero
+LIMIT 10
+```
