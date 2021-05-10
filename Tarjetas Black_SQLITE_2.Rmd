@@ -26,3 +26,5 @@ SELECT id_consejero
 FROM consejero
 LIMIT 10
 ```
+
+Esta es una práctica de GitKraken
